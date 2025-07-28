@@ -29,4 +29,4 @@ chain = LLMChain(llm=model, prompt=prompt)
 
 # Use the chain
 response = chain.run(country="France")
-print(response)
+print(response) 
