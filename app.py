@@ -17,7 +17,7 @@ os.environ["LANGCHAIN_PROJECT"]="Q&A Chatbot with OPENAI"
 prompt =ChatPromptTemplate(
     [
         ("system","you are a helpful assestant .please respose to sepecic query")
-        ("user","Question" :{question})
+        ("user","Question:{question}")
     ]
 )
 
@@ -29,4 +29,4 @@ def generate_response(question,api_key,llm,temperature,max_tokens):
         temperature=temperature,
         max_tokens=max_tokens,
     )
-    return response.choices[0].message.content
+    return response.choices[0].message.content   
